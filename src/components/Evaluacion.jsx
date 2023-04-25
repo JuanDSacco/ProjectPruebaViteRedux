@@ -1,4 +1,4 @@
-import { excelente, regular, desaprobado, aplazo } from "../actions";
+import { excelente, regular, desaprobado, aplazo, reset } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Evaluacion = () => {
@@ -17,9 +17,7 @@ const Evaluacion = () => {
                 <button onClick={() => dispatch(regular())}>8-7</button>
                 <button onClick={() => dispatch(desaprobado())}>6-5-4</button>
                 <button onClick={() => dispatch(aplazo())}>3-2-1</button>
-            </div>
-            <div>
-                <h4>para resolver el problema tendria que usar useState para poder modificar el estado del componente luego de switchear? o en este caso deberia usar un condicional en vez de un ciclo?</h4>
+                <button onClick={() => dispatch(reset())}>Volver a cargar</button>
             </div>
         </>
     )

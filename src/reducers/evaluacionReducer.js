@@ -1,4 +1,4 @@
-import { EXCELENTE, REGULAR, DESAPROBADO, APLAZO } from "../types";
+import { EXCELENTE, REGULAR, DESAPROBADO, APLAZO, RESET } from "../types";
 
 //creo estado inicial para el reducer
 
@@ -19,7 +19,10 @@ export default function evaluacionReducer(state=initailState, action){
             return state + 'Desaprobaste el examen :/ '
         case APLAZO:
             return state + 'Aplazaste el examen :( '
+        case RESET: 
+            return initailState;
         default: return state;
+
     }
 }
 
